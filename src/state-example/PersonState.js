@@ -1,4 +1,5 @@
-const { ObservableState } = require('editor-events-app/src/observables/ObservableState');
+
+import {ObservableState} from '../state/ObservableState';
 
 class PersonState extends ObservableState {
   getInitialContext() {

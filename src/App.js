@@ -1,23 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
+import { PersonaNameDisplay } from './state-example/PersonNameDisplay';
+import { PersonDetailsDisplay } from './state-example/PersonDetailsDisplay';
+import { PersonDataForm } from './state-example/PersonDataForm';
+import { setAutoFreeze } from 'immer';
+
+setAutoFreeze(false);
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+      <PersonDataForm/>
+      <PersonaNameDisplay/>
+      <PersonDetailsDisplay/>
+      
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        An small example for state
       </header>
+ 
     </div>
   );
 }

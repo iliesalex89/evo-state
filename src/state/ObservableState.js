@@ -1,5 +1,4 @@
-import { isNullOrUndefined } from 'editor-utils-app/src/Common';
-import produce from 'immer';
+import {produce} from 'immer';
 import { Subject } from 'rxjs';
 
 export class ObservableState {
@@ -65,7 +64,7 @@ export class ObservableState {
 
   subscribe(handler, comparer) {
     const subscription = this._contextObservable.subscribe(({ nextContext, prevContext }) => {
-      if (!isNullOrUndefined(comparer) && comparer(prevContext, nextContext) === false) {
+      if (comparer && comparer(prevContext, nextContext) === false) {
         return;
       }
 
