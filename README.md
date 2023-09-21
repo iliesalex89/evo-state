@@ -1,4 +1,4 @@
-# Getting Started with My Evo state management
+# Getting Started with my evo-state-management
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
